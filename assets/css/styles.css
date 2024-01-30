@@ -56,13 +56,13 @@ input:focus {
     overflow: clip;
 }
 
-.signup {
+main {
     flex: 1;
     padding: 50px 0px;
     min-width: 520px;
 }
 
-.signup > * {
+main > * {
     padding: 0px min(50px, 5%)
 }
 
@@ -83,7 +83,7 @@ input:focus {
     height: 100%;
 }
 
-.signup > blockquote {
+main > blockquote {
     margin: 0px;
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -91,19 +91,19 @@ input:focus {
     color: #4C6398;
 }
 
-.signup > blockquote > div:first-child {
+main > blockquote > div:first-child {
     margin-top: 20px;
 }
 
-.signup form {
+main form {
     max-width: 550px;
 }
 
-.signup form>p {
+main form>p {
     margin-right: 20px;
 }
 
-.signup h2 {
+main h2 {
     width: 100%;
     font-family: var(--bold-font);
     font-size: 2rem;
@@ -112,7 +112,7 @@ input:focus {
 }
 
 
-.signup button {
+main button {
     font-family: var(--fonts);
     padding: 15px 40px;
     margin: 10px 0px 5px 0px;
@@ -123,22 +123,23 @@ input:focus {
     color: white;
 }
 
-.signup button:hover {
+main button:hover {
     background-color: var(--btn-color-hover);
     cursor: pointer;
 }
 
-.signup > p:last-child > a {
+main > p:last-child > a {
     font-weight: bold;
     text-decoration: none;
     color: var(--btn-color);
 }
 
-.signup > p:last-child > a:hover {
+main > p:last-child > a:hover {
     color: var(--btn-color-hover);
 }
 
 .form-container {
+    padding-bottom: 20px;
     box-shadow: 0px 5px 15px 2px var(--box-shadow-color);
 }
 
