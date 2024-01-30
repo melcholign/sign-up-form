@@ -1,12 +1,26 @@
+@font-face {
+    font-family: 'JosefinSans-Regular';
+    src: url(../fonts/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'JosefinSans-Bold';
+    src: url(../fonts/JosefinSans-Bold.ttf);
+}
+
 :root {
-    --font-color: rgb(48, 72, 76);
-    --button-color: rgb(73, 91, 100);
-    --fonts: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --bg-color: #FFFFFF;
+    --font-color: #6a6890;
+    --btn-color: #135092;
+    --btn-color-hover: #09294b;
+    --box-shadow-color: rgb(230, 230, 230);
+    --normal-font: 'JosefinSans-Regular';
+    --bold-font: 'JosefinSans-Bold';
 }
 
 body {
-    height: 100vh;
-    font-family: var(--fonts);
+    background-color: var(--bg-color);
+    font-family: var(--normal-font);
 }
 
 label {
@@ -26,33 +40,106 @@ input {
     border-radius: 5px;
     outline: none;
     padding: 1rem 0.5rem;
+    margin-right: 10px;
 }
 
 input:focus {
-    border-color:var(--button-color);
-    box-shadow: 2px 2px 5px 0px rgb(230, 230, 230);
+    border-color: var(--btn-color);
+    box-shadow: 2px 2px 5px 0px var(--box-shadow-color);
 }
 
-.signup button {
-    font-family: var(--fonts);
-    padding: 15px 40px;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--button-color);
+.banner {
+    flex: 1;
+    position: relative;
+    height: 100vh;
+    min-width: 450px;
+    overflow: clip;
+}
+
+.signup {
+    flex: 1;
+    padding: 50px 0px;
+    min-width: 520px;
+}
+
+.signup > * {
+    padding: 0px min(50px, 5%)
+}
+
+.banner div {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    font-family: var(--bold-font);
+    font-size: 2.5rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.signup > blockquote {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: white;
+    color: #4C6398;
 }
 
-.signup > form {
-    width: 450px;
-    padding: 50px 25px;
-    border: 2px solid black;
+.signup > blockquote > div:first-child {
+    margin-top: 20px;
+}
+
+.signup form {
+    max-width: 550px;
+}
+
+.signup form>p {
+    margin-right: 20px;
 }
 
 .signup h2 {
     width: 100%;
+    font-family: var(--bold-font);
+    font-size: 2rem;
     letter-spacing: 2px;
-    color: var(--font-color);
+    color: #2D356E;
+}
+
+
+.signup button {
+    font-family: var(--fonts);
+    padding: 15px 40px;
+    margin: 10px 0px 5px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--btn-color);
+    font-weight: bold;
+    color: white;
+}
+
+.signup button:hover {
+    background-color: var(--btn-color-hover);
+    cursor: pointer;
+}
+
+.signup > p:last-child > a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--btn-color);
+}
+
+.signup > p:last-child > a:hover {
+    color: var(--btn-color-hover);
+}
+
+.form-container {
+    box-shadow: 0px 5px 15px 2px var(--box-shadow-color);
 }
 
 .flex-row {

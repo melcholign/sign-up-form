@@ -4,49 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-up Form</title>
     <link rel="stylesheet" href="./assets/css/normalize-css-reset/node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="./assets/js/script.js" defer></script>
 </head>
 
-<body class="flex-row justify-center align-center">
+<body class="flex-row justify-center align-center flex-wrap">
+    <section class="banner">
+        <div>DeepBlu.</div>
+        <img src="./assets/img/banner.jpg" alt="" width="3000" height="4000" >
+    </section>
     <section class="signup">
-        <form action="" class="flex-row justify-space-between flex-wrap">
-            <h2>SIGN UP</h2>
-            <p>
-                <label for="first-name">FIRST NAME</label>
-                <input type="text" id="first-name" name="firstName" placeholder="" autocomplete="off" required>
-            </p>
-            <p>
-                <label for="last-name">LAST NAME</label>
-                <input type="text" id="last-name" name="lastName" placeholder="" autocomplete="off" required>
-            </p>
-            <p>
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" placeholder=""
-                    pattern="^[A-Za-z0-9]+([_\.\-][A-Za-z0-9]+)*@([A-Za-z0-9]+\-?[A-Za-z0-9]+)+(\.[a-z]{2,3}){1,2}$"
-                    autocomplete="off" required>
-            </p>
-            <p>
-                <label for="phone">PHONE NUMBER</label>
-                <input type="tel" id="phone" name="phoneNumber"
-                    pattern="^\+\d{1,3}[\s]?(\d+[\s\-]?\d+)+$" autocomplete="off" required>
-            </p>
-            <p>
-                <label for="pwd">PASSWORD</label>
-                <input type="password" id="pwd" name="password" minlength="8" maxlength="32" placeholder=""
-                    pattern="^(?=.*[A-Z])(?=.*\d).*$" autocomplete="off" required>
-            </p>
-            <p>
-                <label for="pwd-confirm">CONFIRM PASSWORD</label>
-                <input type="password" id="pwd-confirm" name="passwordConfirm" placeholder="" autocomplete="off" required>
-            </p>
-            <p>
-                <button type="submit">Create Account</button>
-            </p>
-        </form>
+        <blockquote>
+            <div>Experience the extreme depths of your consciousness via the plunge into the Arctic ambient simulator.</div>
+            <div>Sign up to take the next step towards apotheosis.</div>
+        </blockquote>
+        <div class="form-container">
+            <form action="" class="flex-row flex-wrap">
+                <h2>Dive in.</h2>
+                <p>
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="firstName" placeholder="" autocomplete="off" required>
+                </p>
+                <p>
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="lastName" placeholder="" autocomplete="off" required>
+                </p>
+                <p>
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" placeholder=""
+                        pattern="^[A-Za-z0-9]+([_\.\-][A-Za-z0-9]+)*@([A-Za-z0-9]+\-?[A-Za-z0-9]+)+(\.[a-z]{2,3}){1,2}$"
+                        autocomplete="off" required>
+                </p>
+                <p>
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" id="phone" name="phoneNumber"
+                        pattern="^\+\d{1,3}[\s]?(\d+[\s\-]?\d+)+$" autocomplete="off" required>
+                </p>
+                <p>
+                    <label for="pwd">PASSWORD</label>
+                    <input type="password" id="pwd" name="password" minlength="8" maxlength="32" placeholder=""
+                        pattern="^(?=.*[A-Z])(?=.*\d).*$" autocomplete="off" required>
+                </p>
+                <p>
+                    <label for="pwd-confirm">CONFIRM PASSWORD</label>
+                    <input type="password" id="pwd-confirm" name="passwordConfirm" placeholder="" autocomplete="off" required>
+                </p>
+            </form>
+        </div>
+        <p class="btn-container">
+            <button type="submit">Create Account</button>
         </p>
+        <p>Already have an account? <a href="">Log in</a> </p>
     </section>
 </body>
 
