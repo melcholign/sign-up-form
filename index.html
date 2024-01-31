@@ -35,43 +35,47 @@
 
                 <p>
                     <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" class="invalid-style-hidden" name="firstName" placeholder="" autocomplete="off" required>
+                    <input type="text" id="first-name" class="invalid-style-hidden" name="firstName" placeholder=""
+                        autocomplete="off" required>
                     <span></span>
                 </p>
 
                 <p>
                     <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name" class="invalid-style-hidden" name="lastName" placeholder="" autocomplete="off" required>
+                    <input type="text" id="last-name" class="invalid-style-hidden" name="lastName" placeholder=""
+                        autocomplete="off" required>
                     <span></span>
                 </p>
 
                 <p>
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email" class="invalid-style-hidden" name="email" placeholder="username@domain"
-                        pattern="^[A-Za-z0-9]+([_\.\-][A-Za-z0-9]+)*@([A-Za-z0-9]+\-?[A-Za-z0-9]+)+(\.[a-z]{2,3}){1,2}$"
+                    <input type="email" id="email" class="invalid-style-hidden" name="email"
+                        placeholder="username@domain"
+                        pattern="^[A-Za-z0-9]+([_\.\-][A-Za-z0-9]+)*@([A-Za-z0-9]+-?[A-Za-z0-9]+)+(\.[a-z]{2,3}){1,2}$"
                         autocomplete="off" required>
                     <span></span>
                 </p>
 
                 <p>
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" class="invalid-style-hidden" name="phoneNumber" pattern="^\+\d{1,3}[\s]?(\d+[\s\-]?\d+)+$"
+                    <input type="tel" id="phone" class="invalid-style-hidden" name="phoneNumber" minlength="7"
+                        maxlength="18" pattern="^\+\d{1,3}[\s](\d+[\s\-]?\d+)+$"
                         placeholder="+(int. calling code) (national no.)" autocomplete="off" required>
                     <span></span>
                 </p>
 
                 <p>
                     <label for="pwd">PASSWORD</label>
-                    <input type="password" id="pwd" class="invalid-style-hidden" name="password" minlength="8" maxlength="32" placeholder=""
-                        pattern="^(?=.*[A-Z])(?=.*\d).*$" autocomplete="off" required>
-                        <span></span>
+                    <input type="password" id="pwd" class="invalid-style-hidden" name="password" minlength="8"
+                        maxlength="32" placeholder="" pattern="^(?=.*[A-Z])(?=.*\d).*$" autocomplete="off" required>
+                    <span></span>
                 </p>
 
                 <p>
                     <label for="pwd-confirm">CONFIRM PASSWORD</label>
-                    <input type="password" id="pwd-confirm" class="invalid-style-hidden" name="passwordConfirm" placeholder="" autocomplete="off"
-                        required>
-                        <span></span>
+                    <input type="password" id="pwd-confirm" class="invalid-style-hidden" name="passwordConfirm"
+                        maxlength="32" placeholder="" autocomplete="off" required>
+                    <span></span>
                 </p>
             </form>
 
