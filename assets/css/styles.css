@@ -28,6 +28,7 @@ body {
     position: relative;
     overflow: clip;
     min-width: min(415px, 100%);
+    max-height: 100vh;
 }
 
 .banner div {
@@ -52,6 +53,7 @@ body {
 main {
     flex: 11;
     min-width: min(510px, 100%);
+    align-self: center;
 }
 
 main > * {
