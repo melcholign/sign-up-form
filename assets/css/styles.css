@@ -1,76 +1,40 @@
 @font-face {
-    font-family: 'JosefinSans-Regular';
+    font-family: JosefinSans-Regular;
     src: url(../fonts/JosefinSans-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'JosefinSans-Bold';
+    font-family: JosefinSans-Bold;
     src: url(../fonts/JosefinSans-Bold.ttf);
 }
 
 :root {
-    --bg-color: #FFFFFF;
-    --font-color: #6a6890;
-    --btn-color: #135092;
-    --btn-color-hover: #09294b;
-    --box-shadow-color: rgb(230, 230, 230);
-    --normal-font: 'JosefinSans-Regular';
-    --bold-font: 'JosefinSans-Bold';
+    --label-color: #6a6890;
+    --btn-bg: #135092;
+    --btn-bg-hover: #09294b;
+    --shadow-color: rgb(230, 230, 230);
+    --fallback-fonts:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    background-color: var(--bg-color);
-    font-family: var(--normal-font);
+    font-family:  JosefinSans-Regular, var(--fallback-fonts);
+    height: 100vh;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: var(--font-color);
-}
-
-input {
-    box-sizing: border-box;
-    width: 200px;
-    height: 1.5rem;
-    border: 2px solid rgb(230, 230, 230);
-    border-radius: 5px;
-    outline: none;
-    padding: 1rem 0.5rem;
-    margin-right: 10px;
-}
-
-input:focus {
-    border-color: var(--btn-color);
-    box-shadow: 2px 2px 5px 0px var(--box-shadow-color);
-}
+/* ---------- banner ---------- */
 
 .banner {
-    flex: 1;
+    flex: 9;
     position: relative;
-    height: 100vh;
-    min-width: 450px;
     overflow: clip;
-}
-
-main {
-    flex: 1;
-    padding: 50px 0px;
-    min-width: 520px;
-}
-
-main > * {
-    padding: 0px min(50px, 5%)
+    min-width: min(415px, 100%);
 }
 
 .banner div {
     position: absolute;
-    top: 20px;
+    top: 50px;
     width: 100%;
-    font-family: var(--bold-font);
+    font-family: JosefinSans-Bold;
     font-size: 2.5rem;
     font-weight: 1000;
     letter-spacing: 2px;
@@ -83,9 +47,19 @@ main > * {
     height: 100%;
 }
 
+/* ---------- main: outside form ---------- */
+
+main {
+    flex: 11;
+    min-width: min(510px, 100%);
+}
+
+main > * {
+    padding: 0px calc(5px + 5%);
+}
+
 main > blockquote {
-    margin: 0px;
-    margin-bottom: 20px;
+    margin: 40px 0px;
     font-size: 1.2rem;
     font-weight: bold;
     color: #4C6398;
@@ -95,22 +69,74 @@ main > blockquote > div:first-child {
     margin-top: 20px;
 }
 
-main form {
-    max-width: 550px;
+/* ---------- main: inside form ---------- */
+
+.form-container {
+    box-shadow: 0px 5px 15px 2px var(--shadow-color);
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
-main form>p {
-    margin-right: 20px;
+.form-container form {
+    justify-content: space-around;
+    gap: 0.4rem;
+    max-width: 600px;
 }
 
-main h2 {
+.form-container h2 {
     width: 100%;
-    font-family: var(--bold-font);
+    font-family: JosefinSans-Bold;
     font-size: 2rem;
     letter-spacing: 2px;
     color: #2D356E;
 }
 
+.form-container p {
+    flex: auto;
+    margin: 0px;
+}
+
+/* ---------- main: form controls and related ---------- */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--label-color);
+}
+
+input {
+    box-sizing: border-box;
+    /* width: 100%; */
+    height: 1.5rem;
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 5px;
+    outline: none;
+    padding: 1rem 0.5rem;
+}
+
+input:focus {
+    border-color: var(--btn-bg);
+    box-shadow: 2px 2px 5px 0px var(--shadow-color);
+}
+
+input:invalid:not(.invalid-style-hidden) {
+    border-color: rgb(255, 71, 71);
+}
+
+input::placeholder {
+    font-size: 0.8rem;
+}
+
+input + span {
+    display: block;
+    height: 1.6rem;
+    font-size: 0.8rem;
+}
+
+/* ---------- main: outside form ---------- */
 
 main button {
     font-family: var(--fonts);
@@ -118,30 +144,27 @@ main button {
     margin: 10px 0px 5px 0px;
     border: none;
     border-radius: 10px;
-    background-color: var(--btn-color);
+    background-color: var(--btn-bg);
     font-weight: bold;
     color: white;
 }
 
 main button:hover {
-    background-color: var(--btn-color-hover);
+    background-color: var(--btn-bg-hover);
     cursor: pointer;
 }
 
 main > p:last-child > a {
     font-weight: bold;
     text-decoration: none;
-    color: var(--btn-color);
+    color: var(--btn-bg);
 }
 
 main > p:last-child > a:hover {
-    color: var(--btn-color-hover);
+    color: var(--btn-bg-hover);
 }
 
-.form-container {
-    padding-bottom: 20px;
-    box-shadow: 0px 5px 15px 2px var(--box-shadow-color);
-}
+/* ---------- alignment classes ---------- */
 
 .flex-row {
     display: flex;
@@ -157,6 +180,10 @@ main > p:last-child > a:hover {
 
 .align-center {
     align-items: center;
+}
+
+.align-stretch {
+    align-items: stretch;
 }
 
 .flex-wrap {

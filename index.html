@@ -10,53 +10,82 @@
     <script src="./assets/js/script.js" defer></script>
 </head>
 
-<body class="flex-row justify-center align-center flex-wrap">
+<body class="flex-row justify-center align-stretch flex-wrap">
+
     <section class="banner">
         <div>DeepBlu.</div>
-        <img src="./assets/img/banner.jpg" alt="" width="3000" height="4000" >
+        <img src="./assets/img/banner.jpg" alt="" width="3000" height="4000">
     </section>
+
     <main>
+
         <blockquote>
-            <div>Experience the extreme depths of your consciousness via the plunge into the Arctic ambient simulator.</div>
+
+            <div>Experience the extreme depths of your consciousness via the plunge into the Arctic ambient simulator.
+            </div>
             <div>Sign up to take the next step towards apotheosis.</div>
+
         </blockquote>
+
         <div class="form-container">
+
+            <h2>Dive in.</h2>
+
             <form action="" class="flex-row flex-wrap" id="signup">
-                <h2>Dive in.</h2>
+
                 <p>
                     <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="firstName" placeholder="" autocomplete="off" required>
+                    <input type="text" id="first-name" class="invalid-style-hidden" name="firstName" placeholder="" autocomplete="off" required>
+                    <span></span>
                 </p>
+
                 <p>
                     <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name" name="lastName" placeholder="" autocomplete="off" required>
+                    <input type="text" id="last-name" class="invalid-style-hidden" name="lastName" placeholder="" autocomplete="off" required>
+                    <span></span>
                 </p>
+
                 <p>
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email" placeholder=""
+                    <input type="email" id="email" class="invalid-style-hidden" name="email" placeholder="username@domain"
                         pattern="^[A-Za-z0-9]+([_\.\-][A-Za-z0-9]+)*@([A-Za-z0-9]+\-?[A-Za-z0-9]+)+(\.[a-z]{2,3}){1,2}$"
                         autocomplete="off" required>
+                    <span></span>
                 </p>
+
                 <p>
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phoneNumber"
-                        pattern="^\+\d{1,3}[\s]?(\d+[\s\-]?\d+)+$" autocomplete="off" required>
+                    <input type="tel" id="phone" class="invalid-style-hidden" name="phoneNumber" pattern="^\+\d{1,3}[\s]?(\d+[\s\-]?\d+)+$"
+                        placeholder="+(int. calling code) (national no.)" autocomplete="off" required>
+                    <span></span>
                 </p>
+
                 <p>
                     <label for="pwd">PASSWORD</label>
-                    <input type="password" id="pwd" name="password" minlength="8" maxlength="32" placeholder=""
+                    <input type="password" id="pwd" class="invalid-style-hidden" name="password" minlength="8" maxlength="32" placeholder=""
                         pattern="^(?=.*[A-Z])(?=.*\d).*$" autocomplete="off" required>
+                        <span></span>
                 </p>
+
                 <p>
                     <label for="pwd-confirm">CONFIRM PASSWORD</label>
-                    <input type="password" id="pwd-confirm" name="passwordConfirm" placeholder="" autocomplete="off" required>
+                    <input type="password" id="pwd-confirm" class="invalid-style-hidden" name="passwordConfirm" placeholder="" autocomplete="off"
+                        required>
+                        <span></span>
                 </p>
             </form>
+
         </div>
+
         <p class="btn-container">
             <button type="submit" form="signup">Create Account</button>
         </p>
-        <p>Already have an account? <a href="">Log in</a> </p>
+
+        <p>
+            Already have an account?
+            <a href="">Log in</a>
+        </p>
+
     </main>
 </body>
 
